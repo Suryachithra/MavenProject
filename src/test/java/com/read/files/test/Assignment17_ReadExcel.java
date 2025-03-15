@@ -1,11 +1,11 @@
-package com.assignment.test;
+package com.read.files.test;
 
 import java.util.List;
 import java.util.Map;
 
 import com.assignments.framework.utilities.ExcelUtil;
 
-public class Assignment17 {
+public class Assignment17_ReadExcel {
 
 	public static void main(String[] args) {
 //		
