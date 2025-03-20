@@ -102,8 +102,8 @@ public class Assignment_DemoQA {
 		}
 		
 		// 13.Upload photo
-		WebElement uploadPhoto = driver.findElement(By.xpath("//input[@id='uploadPicture']"));
-		uploadPhoto.click();
+		//WebElement uploadPhoto = driver.findElement(By.xpath("//input[@id='uploadPicture']"));
+		//uploadPhoto.click();
 		
 		
 		// 16. Wait till file upload
