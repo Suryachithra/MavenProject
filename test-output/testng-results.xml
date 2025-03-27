@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="4" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-27T11:46:08 IST" name="Suite" finished-at="2025-03-27T11:46:36 IST" duration-ms="28144">
+    <groups>
+      <group name="Sanity">
+        <method signature="AppTestClass.login(java.lang.String,java.lang.String)[pri:2, instance:com.framework.test.AppTestClass@2a65fe7c]" name="login" class="com.framework.test.AppTestClass"/>
+        <method signature="AppTestClass.forgotPassword()[pri:3, instance:com.framework.test.AppTestClass@2a65fe7c]" name="forgotPassword" class="com.framework.test.AppTestClass"/>
+      </group> <!-- Sanity -->
+      <group name="Regression">
+        <method signature="AppTestClass.login(java.lang.String,java.lang.String)[pri:2, instance:com.framework.test.AppTestClass@2a65fe7c]" name="login" class="com.framework.test.AppTestClass"/>
+        <method signature="AppTestClass.forgotPassword()[pri:3, instance:com.framework.test.AppTestClass@2a65fe7c]" name="forgotPassword" class="com.framework.test.AppTestClass"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="AppTestClass.forgotPassword()[pri:3, instance:com.framework.test.AppTestClass@2a65fe7c]" name="forgotPassword" class="com.framework.test.AppTestClass"/>
+      </group> <!-- Smoke -->
+    </groups>
+    <test started-at="2025-03-27T11:46:08 IST" name="Test" finished-at="2025-03-27T11:46:36 IST" duration-ms="28144">
+      <class name="com.framework.test.AppTestClass">
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:08 IST" name="launchBrowser" finished-at="2025-03-27T11:46:12 IST" duration-ms="3236" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:12 IST" name="launchApplication" finished-at="2025-03-27T11:46:15 IST" depends-on-methods="com.framework.test.BaseClass.launchBrowser" duration-ms="3649" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:2, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:15 IST" name="login" data-provider="login" finished-at="2025-03-27T11:46:17 IST" duration-ms="1535" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:17 IST" name="tearDown" finished-at="2025-03-27T11:46:17 IST" duration-ms="334" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:17 IST" name="launchBrowser" finished-at="2025-03-27T11:46:19 IST" duration-ms="1999" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:19 IST" name="launchApplication" finished-at="2025-03-27T11:46:23 IST" depends-on-methods="com.framework.test.BaseClass.launchBrowser" duration-ms="4405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="login(java.lang.String,java.lang.String)[pri:2, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:23 IST" name="login" data-provider="login" finished-at="2025-03-27T11:46:26 IST" duration-ms="2605" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invaliduser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[invalidpass]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:26 IST" name="tearDown" finished-at="2025-03-27T11:46:26 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="launchBrowser(java.lang.String)[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:26 IST" name="launchBrowser" finished-at="2025-03-27T11:46:28 IST" duration-ms="1820" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:28 IST" name="launchApplication" finished-at="2025-03-27T11:46:35 IST" depends-on-methods="com.framework.test.BaseClass.launchBrowser" duration-ms="6464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="forgotPassword()[pri:3, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:35 IST" name="forgotPassword" finished-at="2025-03-27T11:46:36 IST" depends-on-methods="com.framework.test.AppTestClass.login" duration-ms="1431" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.framework.test.AppTestClass@2a65fe7c]" started-at="2025-03-27T11:46:36 IST" name="tearDown" finished-at="2025-03-27T11:46:36 IST" duration-ms="279" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.framework.test.AppTestClass -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

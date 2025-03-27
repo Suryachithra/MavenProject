@@ -5,6 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Assignment_Frames {
 	
@@ -12,7 +13,11 @@ public class Assignment_Frames {
 
 	public static void main(String[] args) {
 		// 1.Launch Chrome Browser
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--window-size=1920,1080");
+		
 		driver = new ChromeDriver();
+		
 
 		// 2.Maximize the browser window
 		driver.manage().window().maximize();
@@ -31,12 +36,14 @@ public class Assignment_Frames {
 		// 5.Print frame element text
 		switchToFrame("frame1");
 		
+		switchToMainWindow() ;
+		
 		switchToFrame("frame2");
 		
 		// 6.Print main window element text
 		switchToMainWindow();
 		WebElement text = driver.findElement(By.xpath("//div[contains(text(),'Sample Iframe page There are 2 Iframes')]"));
-		text.getText();
+		System.out.println(text.getText());
 
 		// 7.Close browser window
 		driver.quit();
@@ -48,11 +55,8 @@ public class Assignment_Frames {
 		WebElement frame = driver.findElement(By.xpath("//iframe[@id='"+frameName+"']"));
 		driver.switchTo().frame(frame);
 		
-		JavascriptExecutor js = (JavascriptExecutor)driver;
-		js.executeScript("arguments[0].scrollIntoView()", driver.findElement(By.xpath("//iframe[@id='"+frameName+"']")));
-		
 		WebElement textInsideframe = driver.findElement(By.xpath("//h1[@id='sampleHeading']"));
-		textInsideframe.getText();
+		System.out.println(textInsideframe.getText());
 	}
 	
 	//switch back to the main window 

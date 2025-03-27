@@ -1,10 +1,14 @@
 package com.selenium.test;
+import java.time.Duration;
+
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Assignment_alerts {
 	
@@ -33,7 +37,7 @@ public class Assignment_alerts {
 					       
 		// 6.Print Alert message
 		Alert alert = driver.switchTo().alert();
-		alert.getText();
+		System.out.println(alert.getText());
 		
 		// 7.Click on OK button
 		alert.accept();
@@ -42,7 +46,7 @@ public class Assignment_alerts {
 		alertHandle("confirm");
 		
 		// 9.Print Alert message
-		alert.getText();	 
+		System.out.println(alert.getText());	 
 		
 		// 10.Click on Cancel button
 		alert.dismiss();
@@ -52,7 +56,7 @@ public class Assignment_alerts {
 		alertHandle("promt");
 		
 		// 12.Print message
-		alert.getText();
+		System.out.println(alert.getText());
 			
 		// 13.Enter Text in Alert
 		alert.sendKeys("suryachithra");
@@ -65,6 +69,8 @@ public class Assignment_alerts {
 		public static void alertHandle(String alertName) {
 			WebElement alertsButton = driver.findElement(By.xpath("//button[@id='"+alertName+"Button']"));
 			alertsButton.click();
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+			wait.until(ExpectedConditions.alertIsPresent());
 		}
 
 }
